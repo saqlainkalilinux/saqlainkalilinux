@@ -1,0 +1,198 @@
+name: Update Language Stats
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-language-stats:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout profile repository
+        uses: actions/checkout@v4
+
+      - name: Generate language statistics
+        env:
+          GH_STATS_TOKEN: ${{ secrets.LANG_STATS_PAT }}
+          GITHUB_USERNAME: saqlainkalilinux
+        run: |
+          python3 <<'PY'
+          import os
+          import json
+          import html
+          import urllib.request
+          from collections import defaultdict
+          from pathlib import Path
+
+          TOKEN = os.environ["GH_STATS_TOKEN"]
+          USERNAME = os.environ["GITHUB_USERNAME"]
+
+          headers = {
+              "Authorization": f"Bearer {TOKEN}",
+              "Accept": "application/vnd.github+json",
+              "X-GitHub-Api-Version": "2022-11-28",
+              "User-Agent": "saqlainkalilinux-language-stats"
+          }
+
+          def api_get(url):
+              req = urllib.request.Request(url, headers=headers)
+              with urllib.request.urlopen(req) as response:
+                  return json.loads(response.read().decode())
+
+          # Get all repositories accessible to the token.
+          repos = []
+          page = 1
+
+          while True:
+              batch = api_get(
+                  f"https://api.github.com/user/repos"
+                  f"?affiliation=owner&per_page=100&page={page}"
+              )
+
+              if not batch:
+                  break
+
+              repos.extend(batch)
+
+              if len(batch) < 100:
+                  break
+
+              page += 1
+
+          totals = defaultdict(int)
+
+          for repo in repos:
+              # Only repositories actually owned by this account.
+              if repo["owner"]["login"].lower() != USERNAME.lower():
+                  continue
+
+              # Ignore forks so copied repositories do not distort the stats.
+              if repo.get("fork"):
+                  continue
+
+              languages = api_get(repo["languages_url"])
+
+              for language, byte_count in languages.items():
+                  totals[language] += byte_count
+
+          if not totals:
+              raise SystemExit("No language data was returned by GitHub.")
+
+          grand_total = sum(totals.values())
+
+          stats = sorted(
+              (
+                  (language, byte_count, (byte_count / grand_total) * 100)
+                  for language, byte_count in totals.items()
+              ),
+              key=lambda item: item[1],
+              reverse=True
+          )
+
+          # GitHub/Linguist-inspired colors for common languages.
+          colors = {
+              "Python": "#3572A5",
+              "JavaScript": "#f1e05a",
+              "TypeScript": "#3178c6",
+              "HTML": "#e34c26",
+              "CSS": "#663399",
+              "C": "#555555",
+              "C++": "#f34b7d",
+              "C#": "#178600",
+              "Java": "#b07219",
+              "Dart": "#00B4AB",
+              "Shell": "#89e051",
+              "Objective-C": "#438eff",
+              "Assembly": "#6E4C13",
+              "PHP": "#4F5D95",
+              "Go": "#00ADD8",
+              "Rust": "#dea584",
+              "Ruby": "#701516",
+              "Kotlin": "#A97BFF",
+              "Swift": "#F05138",
+              "Vue": "#41b883"
+          }
+
+          width = 720
+          left = 40
+          bar_x = 220
+          bar_width = 430
+          row_height = 42
+          top = 105
+          height = top + len(stats) * row_height + 70
+
+          parts = [
+              f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
+              '<rect width="100%" height="100%" rx="14" fill="#0D1117"/>',
+              '<text x="40" y="48" fill="#00FF88" font-size="22" font-weight="700" font-family="monospace">Languages Across My Projects</text>',
+              '<text x="40" y="75" fill="#8B949E" font-size="12" font-family="monospace">Public + private repositories • automatically generated</text>'
+          ]
+
+          for index, (language, byte_count, percentage) in enumerate(stats):
+              y = top + index * row_height
+              safe_language = html.escape(language)
+              color = colors.get(language, "#00FF88")
+
+              # Keep tiny languages visible.
+              fill_width = max(3, bar_width * percentage / 100)
+
+              parts.append(
+                  f'<text x="{left}" y="{y + 15}" '
+                  f'fill="#C9D1D9" font-size="14" '
+                  f'font-family="monospace">{safe_language}</text>'
+              )
+
+              parts.append(
+                  f'<rect x="{bar_x}" y="{y}" width="{bar_width}" height="17" '
+                  f'rx="8" fill="#21262D"/>'
+              )
+
+              parts.append(
+                  f'<rect x="{bar_x}" y="{y}" width="{fill_width:.2f}" height="17" '
+                  f'rx="8" fill="{color}"/>'
+              )
+
+              parts.append(
+                  f'<text x="{bar_x + bar_width + 15}" y="{y + 14}" '
+                  f'fill="#00FF88" font-size="13" '
+                  f'font-family="monospace">{percentage:.1f}%</text>'
+              )
+
+          parts.append(
+              f'<text x="40" y="{height - 25}" fill="#6E7681" '
+              f'font-size="11" font-family="monospace">'
+              f'{len(repos)} repositories scanned • {len(stats)} languages detected'
+              '</text>'
+          )
+
+          parts.append("</svg>")
+
+          Path("assets").mkdir(exist_ok=True)
+          Path("assets/languages.svg").write_text(
+              "\n".join(parts),
+              encoding="utf-8"
+          )
+
+          print("Languages detected:")
+          for language, _, percentage in stats:
+              print(f"{language}: {percentage:.2f}%")
+          PY
+
+      - name: Commit updated statistics
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add assets/languages.svg
+
+          if git diff --cached --quiet; then
+            echo "Language statistics have not changed."
+          else
+            git commit -m "Update language statistics"
+            git push
+          fi
