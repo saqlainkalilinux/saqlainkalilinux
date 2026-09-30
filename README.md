@@ -94,14 +94,6 @@ Build → Break → Understand → Secure
 
 </div>
 
-<br>
-
-<div align="center">
-
-<img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=saqlainkalilinux&theme=github-compact&hide_border=true&area=true" />
-
-</div>
-
 ---
 
 ## 🎯 What I Build Here
