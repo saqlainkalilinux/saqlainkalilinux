@@ -43,28 +43,97 @@ Build → Break → Understand → Secure
 
 ---
 
-## ⚔️ Security Arsenal
+## ⚔️ Technical & Security Arsenal
+
+### 💻 Programming Languages
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/Python-0D1117?style=for-the-badge&logo=python&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/Java-0D1117?style=for-the-badge&logo=openjdk&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/C-0D1117?style=for-the-badge&logo=c&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/C++-0D1117?style=for-the-badge&logo=cplusplus&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/C%23-0D1117?style=for-the-badge&logo=csharp&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/Objective--C-0D1117?style=for-the-badge&logoColor=00FF88" />
+
+<br>
+
+<img src="https://img.shields.io/badge/JavaScript-0D1117?style=for-the-badge&logo=javascript&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/TypeScript-0D1117?style=for-the-badge&logo=typescript&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/Dart-0D1117?style=for-the-badge&logo=dart&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/Bash-0D1117?style=for-the-badge&logo=gnubash&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/x86_Assembly-0D1117?style=for-the-badge&logoColor=00FF88" />
+
+</div>
+
+### 🌐 Web Technologies
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/HTML5-0D1117?style=for-the-badge&logo=html5&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/CSS3-0D1117?style=for-the-badge&logo=css&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/Tailwind_CSS-0D1117?style=for-the-badge&logo=tailwindcss&logoColor=00FF88" />
+
+</div>
+
+### 🐧 Systems & Platforms
 
 <div align="center">
 
 <img src="https://img.shields.io/badge/Kali_Linux-0D1117?style=for-the-badge&logo=kalilinux&logoColor=00FF88" />
 <img src="https://img.shields.io/badge/Linux-0D1117?style=for-the-badge&logo=linux&logoColor=00FF88" />
-<img src="https://img.shields.io/badge/Python-0D1117?style=for-the-badge&logo=python&logoColor=00FF88" />
-<img src="https://img.shields.io/badge/Bash-0D1117?style=for-the-badge&logo=gnubash&logoColor=00FF88" />
-<img src="https://img.shields.io/badge/Burp_Suite-0D1117?style=for-the-badge&logo=burpsuite&logoColor=00FF88" />
-
-<br>
-
-<img src="https://img.shields.io/badge/Nmap-0D1117?style=for-the-badge&logoColor=00FF88" />
-<img src="https://img.shields.io/badge/Metasploit-0D1117?style=for-the-badge&logoColor=00FF88" />
-<img src="https://img.shields.io/badge/Wireshark-0D1117?style=for-the-badge&logo=wireshark&logoColor=00FF88" />
-<img src="https://img.shields.io/badge/OWASP-0D1117?style=for-the-badge&logo=owasp&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/VMware-0D1117?style=for-the-badge&logo=vmware&logoColor=00FF88" />
 <img src="https://img.shields.io/badge/Docker-0D1117?style=for-the-badge&logo=docker&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/Kubernetes-0D1117?style=for-the-badge&logo=kubernetes&logoColor=00FF88" />
 
-<br>
+</div>
+
+### 🔧 Development & Version Control
+
+<div align="center">
 
 <img src="https://img.shields.io/badge/Git-0D1117?style=for-the-badge&logo=git&logoColor=00FF88" />
 <img src="https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&logo=github&logoColor=00FF88" />
+
+</div>
+
+### 🛡️ Offensive Security & Testing
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/Burp_Suite-0D1117?style=for-the-badge&logo=burpsuite&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/Nmap-0D1117?style=for-the-badge&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/Metasploit-0D1117?style=for-the-badge&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/Wireshark-0D1117?style=for-the-badge&logo=wireshark&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/SQLMap-0D1117?style=for-the-badge&logoColor=00FF88" />
+
+<br>
+
+<img src="https://img.shields.io/badge/Hydra-0D1117?style=for-the-badge&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/Gobuster-0D1117?style=for-the-badge&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/ffuf-0D1117?style=for-the-badge&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/John_the_Ripper-0D1117?style=for-the-badge&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/Netcat-0D1117?style=for-the-badge&logoColor=00FF88" />
+
+<br>
+
+<img src="https://img.shields.io/badge/Nikto-0D1117?style=for-the-badge&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/WhatWeb-0D1117?style=for-the-badge&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/Dirsearch-0D1117?style=for-the-badge&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/Aircrack--ng-0D1117?style=for-the-badge&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/WPScan-0D1117?style=for-the-badge&logoColor=00FF88" />
+
+</div>
+
+### 🔐 Security Domains
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/Web_Security-0D1117?style=for-the-badge&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/Red_Teaming-0D1117?style=for-the-badge&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/Penetration_Testing-0D1117?style=for-the-badge&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/Vulnerability_Research-0D1117?style=for-the-badge&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/Network_Security-0D1117?style=for-the-badge&logoColor=00FF88" />
 
 </div>
 
