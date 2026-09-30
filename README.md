@@ -1,6 +1,6 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&height=250&color=0:000000,50:0D1117,100:003B25&text=Muhammad%20Saqlain%20Shoukat&fontColor=00FF88&fontSize=42&fontAlignY=40&desc=Cybersecurity%20%7C%20Red%20Teaming%20%7C%20Practical%20Security%20Labs&descAlignY=59&descSize=17&animation=fadeIn" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=venom&height=250&color=0:000000,50:0D1117,100:003B25&text=Muhammad%20Saqlain%20Shoukat&fontColor=00FF88&fontSize=42&fontAlignY=40&desc=Cybersecurity%20%7C%20Red%20Teaming%20%7C%20Practical%20Cybersecurity%20YouTuber&descAlignY=59&descSize=17&animation=fadeIn" />
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=900&color=00FF88&center=true&vCenter=true&width=800&height=70&lines=%3E+Initializing+Cybersecurity+Environment...;%3E+Exploring+How+Systems+Break...;%3E+Building+Practical+Security+Labs...;%3E+Red+Teaming+%7C+Web+Security+%7C+Security+Research;%3E+Build.+Break.+Understand.+Secure." alt="Typing SVG" />
 
@@ -17,7 +17,7 @@ Muhammad Saqlain Shoukat
 ┌──(saqlainkalilinux㉿kali)-[~]
 └─$ focus
 
-Cybersecurity • Red Teaming • Web Security • Practical Attack Labs
+Cybersecurity • Red Teaming • Web Security • Practical Attack Labs • CodingChatRoom
 
 ┌──(saqlainkalilinux㉿kali)-[~]
 └─$ mission
@@ -28,6 +28,7 @@ Build → Break → Understand → Secure
 ## 🛡️ Cybersecurity Focus
 
 ```text
+[+] Ethical Hacking
 [+] Web Application Security
 [+] Red Teaming & Adversary Simulation
 [+] Authentication & Session Security
@@ -97,13 +98,13 @@ Build → Break → Understand → Secure
 
 <div align="center">
 
-<img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=saqlainkalilinux&bg_color=0D1117&color=00FF88&line=00FF88&point=FFFFFF&area=true&area_color=003B25&hide_border=true&custom_title=Contribution%20Activity" />
+<img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=saqlainkalilinux&theme=github-compact&hide_border=true&area=true" />
 
 </div>
 
 ---
 
-## 🎯 What I Build
+## 🎯 What I Build Here
 
 ```text
 ┌──────────────────────────────────────────────────────────┐
