@@ -147,13 +147,15 @@ Build → Break → Understand → Secure
 
 <div align="center">
 
-<img height="210" src="https://github-readme-stats.vercel.app/api/top-langs/?username=saqlainkalilinux&layout=donut&langs_count=10&stats_format=percentages&hide_border=true&bg_color=0D1117&title_color=00FF88&text_color=C9D1D9&icon_color=00FF88&custom_title=Languages%20Across%20My%20Projects" />
+<img src="./assets/languages.svg"
+     alt="Languages Across My Projects"
+     width="720" />
 
 </div>
 
 <p align="center">
   <sub>
-    Automatically calculated from the source code inside my GitHub repositories.
+    Automatically calculated across my public and private GitHub projects.
   </sub>
 </p>
 
