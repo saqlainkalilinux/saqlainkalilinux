@@ -66,13 +66,16 @@ Build → Break → Understand → Secure
 
 </div>
 
-### 🌐 Web Technologies
+### 🌐 Web & APP Technologies
 
 <div align="center">
 
 <img src="https://img.shields.io/badge/HTML5-0D1117?style=for-the-badge&logo=html5&logoColor=00FF88" />
 <img src="https://img.shields.io/badge/CSS3-0D1117?style=for-the-badge&logo=css&logoColor=00FF88" />
 <img src="https://img.shields.io/badge/Tailwind_CSS-0D1117?style=for-the-badge&logo=tailwindcss&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/React-0D1117?style=for-the-badge&logo=react&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/Next.js-0D1117?style=for-the-badge&logo=nextdotjs&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/Flutter-0D1117?style=for-the-badge&logo=flutter&logoColor=00FF88" />
 
 </div>
 
@@ -132,6 +135,7 @@ Build → Break → Understand → Secure
 <img src="https://img.shields.io/badge/Web_Security-0D1117?style=for-the-badge&logoColor=00FF88" />
 <img src="https://img.shields.io/badge/Red_Teaming-0D1117?style=for-the-badge&logoColor=00FF88" />
 <img src="https://img.shields.io/badge/Penetration_Testing-0D1117?style=for-the-badge&logoColor=00FF88" />
+<img src="https://img.shields.io/badge/Ethical_Hacking-0D1117?style=for-the-badge&logoColor=00FF88" />
 <img src="https://img.shields.io/badge/Vulnerability_Research-0D1117?style=for-the-badge&logoColor=00FF88" />
 <img src="https://img.shields.io/badge/Network_Security-0D1117?style=for-the-badge&logoColor=00FF88" />
 
